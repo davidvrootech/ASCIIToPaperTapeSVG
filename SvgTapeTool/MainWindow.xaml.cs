@@ -202,7 +202,6 @@ public partial class MainWindow : Window
         }
     }
 
-
     private void tbInput_TextChanged(object sender, TextChangedEventArgs e)
     {
         tbInput.TextChanged -= tbInput_TextChanged; // Avoid recursion
