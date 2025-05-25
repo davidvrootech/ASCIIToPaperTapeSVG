@@ -1,13 +1,14 @@
-﻿using System.Windows;
-using System.IO;
-using SharpVectors.Renderers.Wpf;
-using SharpVectors.Converters;
-using System.Text.RegularExpressions;
-using Svg;
+﻿using ASCIIToPaperTapeSVG;
 using Microsoft.Win32;
+using SharpVectors.Converters;
+using SharpVectors.Renderers.Wpf;
+using Svg;
 using System.Diagnostics;
-using System.Windows.Navigation;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Navigation;
 
 namespace SvgTapeTool;
 
@@ -23,6 +24,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         tbInput.Text = "10 PRINT \"HELLO WORLD!\"\r\n20 GOTO 10"; // Default input
+        this.DataContext = new ConfigurationViewModel();
     }
 
     private void btRun_Click(object sender, RoutedEventArgs e)

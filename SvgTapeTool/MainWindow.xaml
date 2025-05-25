@@ -61,6 +61,30 @@
                 </GroupBox>
             </Grid>
         </TabItem>
+        <!-- Configuration -->
+        <TabItem Header="Configuration">
+            <StackPanel Margin="10">
+                <Label Content="Tape Height:" />
+                <TextBox Text="{Binding TapeHeight, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Content="Horizontal Margin:" />
+                <TextBox Text="{Binding HorizontalMargin, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Content="Column Spacing:" />
+                <TextBox Text="{Binding ColumnSpacing, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Content="Data Hole Diameter:" />
+                <TextBox Text="{Binding DataHoleDiam, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Content="Sprocket Hole Diameter:" />
+                <TextBox Text="{Binding SprocketHoleDiam, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Label Content="Max Tape Length (in):" />
+                <TextBox Text="{Binding MaxTapeLengthIn, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Button Content="Apply" Command="{Binding ApplyConfigCommand}" Margin="0,10,0,0"/>
+            </StackPanel>
+        </TabItem>
         <!-- 📘 Help/Reference Tab -->
         <TabItem Header="Help and Reference">
             <ScrollViewer Margin="10">
@@ -102,7 +126,7 @@
                         for a complete ASCII reference.
                     </TextBlock>
                     <TextBlock Margin="0,20,0,0" FontSize="14">
-                        Author: 
+                        Based on work by: 
                         <Hyperlink NavigateUri="https://joshuacolemanmakes.wordpress.com/" 
                                    RequestNavigate="Hyperlink_RequestNavigate">
                             Joshua Coleman

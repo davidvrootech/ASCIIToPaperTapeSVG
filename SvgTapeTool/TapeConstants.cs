@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExCSS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,23 @@ namespace SvgTapeTool
 {
     public static class TapeConstants
     {
-        public const float TAPE_HEIGHT = 1.0f;
-        public const float HORIZONTAL_MARGIN = 0.25f;
-        public const float COLUMN_SPACING = 0.1f;
-        public const float DATA_HOLE_DIAM = 0.072f;
-        public const float SPROCKET_HOLE_DIAM = 0.046f;
-        public const float MAX_TAPE_LENGTH_IN = 16.0f;
+        static TapeConstants()
+        {
+            // Load persisted settings on first access
+            TAPE_HEIGHT = ASCIIToPaperTapeSVG.Properties.Settings.Default.TapeHeight;
+            HORIZONTAL_MARGIN = ASCIIToPaperTapeSVG.Properties.Settings.Default.HorizontalMargin;
+            COLUMN_SPACING = ASCIIToPaperTapeSVG.Properties.Settings.Default.ColumnSpacing;
+            DATA_HOLE_DIAM = ASCIIToPaperTapeSVG.Properties.Settings.Default.DataHoleDiam;
+            SPROCKET_HOLE_DIAM = ASCIIToPaperTapeSVG.Properties.Settings.Default.SprocketHoleDiam;
+            MAX_TAPE_LENGTH_IN = ASCIIToPaperTapeSVG.Properties.Settings.Default.MaxTapeLengthIn;
+        }
+
+        public static float TAPE_HEIGHT { get; set; }
+        public static float HORIZONTAL_MARGIN { get; set; }
+        public static float COLUMN_SPACING { get; set; }
+        public static float DATA_HOLE_DIAM { get; set; }
+        public static float SPROCKET_HOLE_DIAM { get; set; }
+        public static float MAX_TAPE_LENGTH_IN { get; set; }
 
         public static readonly float[] VerticalPositions = {
         0.1f, // bit7

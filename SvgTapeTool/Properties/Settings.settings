@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ASCIIToPaperTapeSVG.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HorizontalMargin" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.25</Value>
+    </Setting>
+    <Setting Name="ColumnSpacing" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.1</Value>
+    </Setting>
+    <Setting Name="DataHoleDiam" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.072</Value>
+    </Setting>
+    <Setting Name="TapeHeight" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SprocketHoleDiam" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.046</Value>
+    </Setting>
+    <Setting Name="MaxTapeLengthIn" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
